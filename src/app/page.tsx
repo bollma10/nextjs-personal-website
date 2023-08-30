@@ -1,9 +1,43 @@
-import Image from 'next/image'
+"use client"
+
+import Image from 'next/image';
+import { Grid } from '@mui/material';
 
 export default function Home() {
   return (
+    <>
+    <Grid container spacing={2} justifyContent="center" sx={{padding: "2em"}}>
+      <Grid item xs={12} md={4} lg={4} 
+        sx={{justifyContent: "center"}}
+      >
+        <Image 
+          src="/selfie.jpg" 
+          width={300} 
+          height={300} 
+          alt="Picture of Nate Bollman"
+          style={{margin: "auto"}}
+        >
+        </Image>
+      </Grid>
+      <Grid item xs={12} md={8} lg={8} sx={{padding: "3vh", display: { xs: 'none', md: 'block' } }}>
+        <h4>About Me</h4>
+        <p>Hello! My name is Nate Bollman and I'm a Master's student at Michigan State University. I graduated with a Bachelor's degree in computer science and a minor in Spanish in May 2023</p>
+      </Grid>
+      <Grid item xs={12} md={8} lg={8} 
+        sx={{padding: "3vh", justifyContent: "center", alignContent: "center", display: { md: "none" }}}
+      >
+        <h4>About Me</h4>
+        <p>TEST TEST TEST Hello! My name is Nate Bollman and I'm a Master's student at Michigan State University. I graduated with a Bachelor's degree in computer science and a minor in Spanish in May 2023</p>
+      </Grid>
+    </Grid>
+    <Grid container spacing={2} sx={{padding: "2em"}}>
+      <h1>Courses & Related Projects</h1>
+      <Grid item xs={12} md={8} lg={8}>
+
+      </Grid>
+    </Grid>
     <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
+      {/* <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
         <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
           Get started by editing&nbsp;
           <code className="font-mono font-bold">src/app/page.tsx</code>
@@ -37,7 +71,7 @@ export default function Home() {
           height={37}
           priority
         />
-      </div>
+      </div> */}
 
       <div className="mb-32 grid text-center lg:mb-0 lg:grid-cols-4 lg:text-left">
         <a
@@ -109,5 +143,6 @@ export default function Home() {
         </a>
       </div>
     </main>
+    </>
   )
 }
